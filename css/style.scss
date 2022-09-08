@@ -192,8 +192,11 @@ body {
 }
 // intro
 .intro_desc {
+  margin-top: 1rem;
   color: #979899;
-  text-align: justify;
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 //exp
@@ -281,5 +284,48 @@ body {
   padding-top: 0;
   .timeline {
     padding-top: 1.75rem;
+  }
+}
+.portfolio {
+  margin: -0.875rem;
+  li {
+    margin: 0.875rem;
+    width: auto;
+  }
+  .port_link {
+    position: relative;
+    &:hover img {
+      transition: ease 0.8s;
+      transform: scale(1.012);
+      opacity: 0.4;
+    }
+    &:hover .port_overlay {
+      opacity: 1;
+    }
+  }
+  .port_img {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .port_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.75rem;
+    color: #e4e5e5;
+    opacity: 0;
+    transition: ease 0.6s;
+  }
+}
+.hobby_list {
+  li {
+    display: inline-block;
+    margin: 0.875rem 0.875rem 0.875rem 0;
+    img {
+      max-height: 30px;
+    }
   }
 }

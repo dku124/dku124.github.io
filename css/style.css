@@ -193,8 +193,11 @@ body {
 }
 
 .intro_desc {
+  margin-top: 1rem;
   color: #979899;
-  text-align: justify;
+}
+.intro_desc:first-child {
+  margin-top: 0;
 }
 
 .content_list li {
@@ -294,4 +297,48 @@ body {
 }
 .sec_content.pt .timeline {
   padding-top: 1.75rem;
+}
+
+.portfolio {
+  margin: -0.875rem;
+}
+.portfolio li {
+  margin: 0.875rem;
+  width: auto;
+}
+.portfolio .port_link {
+  position: relative;
+}
+.portfolio .port_link:hover img {
+  transition: ease 0.8s;
+  transform: scale(1.012);
+  opacity: 0.4;
+}
+.portfolio .port_link:hover .port_overlay {
+  opacity: 1;
+}
+.portfolio .port_img {
+  width: 100%;
+}
+.portfolio .port_img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.portfolio .port_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.75rem;
+  color: #e4e5e5;
+  opacity: 0;
+  transition: ease 0.6s;
+}
+
+.hobby_list li {
+  display: inline-block;
+  margin: 0.875rem 0.875rem 0.875rem 0;
+}
+.hobby_list li img {
+  max-height: 30px;
 }/*# sourceMappingURL=style.css.map */
