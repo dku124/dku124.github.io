@@ -4,6 +4,19 @@ body {
 
 .section {
   position: relative;
+  border-top: 1px solid #404242;
+}
+
+.section:first-child {
+  border-top: 0;
+}
+
+.sec_content {
+  border-top: 1px solid #404242;
+}
+
+.main_header .sec_content {
+  border-top: 0;
 }
 
 .container {
@@ -17,10 +30,11 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
 }
 
-.main_header {
-  height: 100vh;
+.main_header .sec_header {
+  background-color: transparent;
 }
 
 .header_bg {
@@ -30,16 +44,254 @@ body {
   bottom: 0;
   width: 30%;
   z-index: 1;
+  display: none;
 }
 
-.bg01 {
-  background-color: #2b2c2c;
+.content_bg {
+  display: none;
 }
 
 .sec_header {
-  width: 30%;
+  padding: 1.75rem;
 }
 
 .sec_content {
-  width: 70%;
+  padding: 1.75rem;
+}
+
+.header_inner-img {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+.avatar img {
+  border-radius: 50%;
+  width: 11rem;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.header_content {
+  text-align: center;
+}
+
+.header_content-top {
+  margin-bottom: 1.75rem;
+}
+
+.brand_title {
+  font-size: 4.8rem;
+  line-height: 0.91;
+}
+
+.title {
+  line-height: 0.91;
+  font-size: 65%;
+}
+.title-t {
+  display: block;
+  text-transform: lowercase;
+  color: #a4a5a6;
+  font-weight: 300;
+}
+.title-b {
+  display: block;
+  text-transform: uppercase;
+  color: #e0a80d;
+  font-weight: 700;
+}
+
+.brand_sub {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 3.75;
+  color: #979899;
+}
+
+.header_social {
+  display: flex;
+  justify-content: center;
+}
+.header_social li {
+  margin: 3px;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: transform 1.2s ease 0.7s, opacity 1.2s ease 0.7s;
+}
+.header_social a {
+  display: block;
+  text-align: center;
+  width: 33px;
+  height: 33px;
+  font-size: 0.8rem !important;
+  line-height: 2.7 !important;
+  border-radius: 2px;
+  border: 2px solid;
+  background: #3f4040;
+  border-color: #3f4040;
+}
+.header_social a svg {
+  fill: #ccc;
+  height: 100%;
+}
+.header_social a:hover {
+  background: #323333;
+}
+.header_social a:hover svg {
+  fill: #e0a80d;
+}
+
+.header_content-contact {
+  border-top: 2px solid #404242;
+  padding-top: 1.75rem;
+}
+
+.contact_list li {
+  color: #a4a5a6;
+  padding-bottom: 1.75rem;
+}
+.contact_list li a {
+  color: #979899;
+}
+.contact_list li em {
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 0.55rem;
+}
+.contact_list li p {
+  color: #979899;
+}
+
+.sec_header {
+  background-color: #282929;
+}
+
+.header_title {
+  text-transform: uppercase;
+}
+
+.cl1 {
+  color: #a4a5a6;
+}
+
+.cl2 {
+  color: #979899;
+}
+
+.cl-op {
+  opacity: 0.6;
+}
+
+.txt-small {
+  display: block;
+  font-size: 0.7rem;
+}
+
+.intro_desc {
+  color: #979899;
+  text-align: justify;
+}
+
+.content_list li {
+  width: 100%;
+  display: flex;
+  padding-bottom: 1.75rem;
+}
+
+.exp_cont {
+  width: 100%;
+}
+
+.txt_num {
+  display: block;
+  font-size: 1.2rem;
+  margin-right: 16px;
+  line-height: 1.75;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #e0a80d;
+}
+
+.txt_title {
+  text-transform: uppercase;
+}
+
+.progress {
+  background: #404242;
+  margin-top: 0.55rem;
+  position: relative;
+  height: 5px;
+  width: 100%;
+}
+
+.progress_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #e0a80d;
+  -webkit-animation: width 1.4s ease-in-out 0.5s forwards;
+          animation: width 1.4s ease-in-out 0.5s forwards;
+}
+
+@-webkit-keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+.timeline {
+  border-left: 2px solid #404242;
+  margin-left: calc(1rem - 2px);
+  padding-left: 25px;
+}
+.timeline li {
+  position: relative;
+}
+
+.timeline_point {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  left: -31px;
+  top: 3px;
+  border-radius: 50%;
+  background: #e0a80d;
+  box-shadow: 0 0 0 6px #2d2e2e;
+}
+
+.timeline_end {
+  height: 2px;
+  width: 14px;
+  position: absolute;
+  left: -33px;
+  bottom: 0px;
+  background-color: #404242;
+}
+
+.sec_content.pb {
+  padding-bottom: 0;
+}
+
+.sec_content.pt {
+  padding-top: 0;
+}
+.sec_content.pt .timeline {
+  padding-top: 1.75rem;
 }/*# sourceMappingURL=style.css.map */

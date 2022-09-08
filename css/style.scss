@@ -4,8 +4,18 @@ body {
 
 .section {
   position: relative;
+  border-top: 1px solid #404242;
 }
 
+.section:first-child {
+  border-top: 0;
+}
+.sec_content {
+  border-top: 1px solid #404242;
+}
+.main_header .sec_content {
+  border-top: 0;
+}
 .container {
   max-width: 1276px;
   margin: 0 auto;
@@ -16,11 +26,14 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
   }
 }
-
+.main_header .sec_header {
+  background-color: transparent;
+}
 .main_header {
-  height: 100vh;
+  // height: 100vh;
 }
 
 .header_bg {
@@ -30,14 +43,243 @@ body {
   bottom: 0;
   width: 30%;
   z-index: 1;
+  display: none;
 }
-
+.content_bg {
+  display: none;
+}
 .bg01 {
-  background-color: #2b2c2c;
+  // background-color: #2b2c2c;
 }
 .sec_header {
-  width: 30%;
+  // width: 30%;
+  padding: 1.75rem;
 }
 .sec_content {
-  width: 70%;
+  // width: 70%;
+  padding: 1.75rem;
+}
+
+// header
+.header_inner-img {
+  display: flex;
+  height: 100%;
+  // flex-direction: column;
+  justify-content: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  img {
+    border-radius: 50%;
+    width: 11rem;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.header_content {
+  text-align: center;
+}
+.header_content-top {
+  margin-bottom: 1.75rem;
+}
+.brand_title {
+  font-size: 4.8rem;
+  line-height: 0.91;
+}
+.title {
+  line-height: 0.91;
+  font-size: 65%;
+  &-t {
+    display: block;
+    text-transform: lowercase;
+    color: #a4a5a6;
+    font-weight: 300;
+  }
+  &-b {
+    display: block;
+    text-transform: uppercase;
+    color: #e0a80d;
+    font-weight: 700;
+  }
+}
+
+.brand_sub {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 3.75;
+  color: #979899;
+}
+
+.header_social {
+  display: flex;
+  justify-content: center;
+  li {
+    margin: 3px;
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    transition: transform 1.2s ease 0.7s, opacity 1.2s ease 0.7s;
+  }
+  a {
+    display: block;
+    text-align: center;
+    width: 33px;
+    height: 33px;
+    font-size: 0.8rem !important;
+    line-height: 2.7 !important;
+    border-radius: 2px;
+    border: 2px solid;
+    background: #3f4040;
+    border-color: #3f4040;
+    svg {
+      fill: #ccc;
+      height: 100%;
+    }
+    &:hover {
+      background: #323333;
+    }
+    &:hover svg {
+      fill: #e0a80d;
+    }
+  }
+}
+.header_content-contact {
+  border-top: 2px solid #404242;
+  padding-top: 1.75rem;
+}
+.contact_list {
+  li {
+    color: #a4a5a6;
+    padding-bottom: 1.75rem;
+    a {
+      color: #979899;
+    }
+    em {
+      text-transform: capitalize;
+      font-weight: 600;
+      margin-bottom: 0.55rem;
+    }
+    p {
+      color: #979899;
+    }
+  }
+}
+
+// component header part
+.sec_header {
+  background-color: #282929;
+}
+
+.header_title {
+  text-transform: uppercase;
+}
+
+.header_title-sub {
+}
+.cl1 {
+  color: #a4a5a6;
+}
+.cl2 {
+  color: #979899;
+}
+.cl-op {
+  opacity: 0.6;
+}
+.txt-small {
+  display: block;
+  font-size: 0.7rem;
+}
+// intro
+.intro_desc {
+  color: #979899;
+  text-align: justify;
+}
+
+//exp
+.content_list {
+  // display: flex;
+  li {
+    width: 100%;
+    display: flex;
+    padding-bottom: 1.75rem;
+  }
+}
+.exp_cont {
+  width: 100%;
+}
+.txt_num {
+  display: block;
+  font-size: 1.2rem;
+  margin-right: 16px;
+  line-height: 1.75;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #e0a80d;
+}
+.txt_title {
+  text-transform: uppercase;
+}
+
+.progress {
+  background: #404242;
+  margin-top: 0.55rem;
+  position: relative;
+  height: 5px;
+  width: 100%;
+}
+.progress_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #e0a80d;
+  animation: width 1.4s ease-in-out 0.5s forwards;
+}
+@keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+// timeline
+
+.timeline {
+  border-left: 2px solid #404242;
+  margin-left: calc(1rem - 2px);
+  padding-left: 25px;
+  li {
+    position: relative;
+  }
+}
+.timeline_point {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  left: -31px;
+  top: 3px;
+  border-radius: 50%;
+  background: #e0a80d;
+  box-shadow: 0 0 0 6px #2d2e2e;
+}
+
+.timeline_end {
+  height: 2px;
+  width: 14px;
+  position: absolute;
+  left: -33px;
+  bottom: 0px;
+  background-color: #404242;
+}
+.sec_content.pb {
+  padding-bottom: 0;
+}
+.sec_content.pt {
+  padding-top: 0;
+  .timeline {
+    padding-top: 1.75rem;
+  }
 }
