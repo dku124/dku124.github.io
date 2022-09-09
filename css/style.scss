@@ -334,13 +334,15 @@ body {
     }
   }
   .exp_cont {
-    display: flex;
-    .info {
-      flex: 4;
-    }
-    p {
-      flex: 6;
-      margin-left: 20px;
+    @media screen and(min-width:760px) {
+      display: flex;
+      .info {
+        flex: 4;
+      }
+      p {
+        flex: 6;
+        margin-left: 20px;
+      }
     }
   }
 }

@@ -374,15 +374,17 @@ body {
     width: 100%;
   }
 }
-.timeline .exp_cont {
-  display: flex;
-}
-.timeline .exp_cont .info {
-  flex: 4;
-}
-.timeline .exp_cont p {
-  flex: 6;
-  margin-left: 20px;
+@media screen and (min-width: 760px) {
+  .timeline .exp_cont {
+    display: flex;
+  }
+  .timeline .exp_cont .info {
+    flex: 4;
+  }
+  .timeline .exp_cont p {
+    flex: 6;
+    margin-left: 20px;
+  }
 }
 
 .timeline_point {
