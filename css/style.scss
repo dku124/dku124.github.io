@@ -5,6 +5,24 @@ body {
 .section {
   position: relative;
   border-top: 1px solid #404242;
+  @media screen and(min-width:1024px) {
+    border-top: 0;
+  }
+  &:nth-child(even) {
+    .bg01 {
+      @media screen and(min-width:1024px) {
+        background-color: #282929;
+      }
+    }
+    .content_bg {
+      @media screen and(min-width:1024px) {
+        background-color: #2b2c2c;
+      }
+    }
+    .sec_header {
+      background-color: #282929;
+    }
+  }
 }
 
 .section:first-child {
@@ -12,9 +30,18 @@ body {
 }
 .sec_content {
   border-top: 1px solid #404242;
+  padding: 1.75rem;
+  @media screen and (min-width: 1024px) {
+    flex: 7;
+    border-top: 0;
+  }
 }
 .main_header .sec_content {
   border-top: 0;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+  }
 }
 .container {
   max-width: 1276px;
@@ -27,13 +54,21 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+    }
   }
 }
 .main_header .sec_header {
   background-color: transparent;
+  @media screen and(min-width:1024px) {
+    background-color: #2b2c2c;
+  }
 }
 .main_header {
-  // height: 100vh;
+  @media screen and(min-width:1024px) {
+    height: 100vh;
+  }
 }
 
 .header_bg {
@@ -44,28 +79,37 @@ body {
   width: 30%;
   z-index: 1;
   display: none;
+  @media screen and(min-width:1024px) {
+    display: block;
+  }
 }
 .content_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  z-index: 1;
   display: none;
+  @media screen and(min-width:1024px) {
+    display: block;
+  }
 }
 .bg01 {
-  // background-color: #2b2c2c;
-}
-.sec_header {
-  // width: 30%;
-  padding: 1.75rem;
-}
-.sec_content {
-  // width: 70%;
-  padding: 1.75rem;
+  @media screen and(min-width:1024px) {
+    background-color: #2b2c2c;
+  }
 }
 
 // header
 .header_inner-img {
   display: flex;
   height: 100%;
-  // flex-direction: column;
   justify-content: center;
+  @media screen and (min-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .avatar {
@@ -154,9 +198,20 @@ body {
   padding-top: 1.75rem;
 }
 .contact_list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   li {
+    width: 100%;
     color: #a4a5a6;
-    padding-bottom: 1.75rem;
+    padding: 0 10px 1.75rem;
+    word-wrap: break-word;
+    @media screen and (min-width: 600px) {
+      width: 48%;
+    }
+    @media screen and (min-width: 760px) {
+      width: 25%;
+    }
     a {
       color: #979899;
     }
@@ -174,6 +229,12 @@ body {
 // component header part
 .sec_header {
   background-color: #282929;
+  padding: 1.75rem;
+
+  @media screen and (min-width: 1024px) {
+    flex: 3;
+    background-color: #2b2c2c;
+  }
 }
 
 .header_title {
@@ -206,11 +267,16 @@ body {
 
 //exp
 .content_list {
-  // display: flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   li {
     width: 100%;
     display: flex;
     padding-bottom: 1.75rem;
+    @media screen and (min-width: 600px) {
+      width: 48%;
+    }
   }
 }
 .exp_cont {
@@ -256,11 +322,26 @@ body {
 // timeline
 
 .timeline {
+  flex-flow: column;
   border-left: 2px solid #404242;
   margin-left: calc(1rem - 2px);
   padding-left: 25px;
+
   li {
     position: relative;
+    @media screen and(min-width:600px) {
+      width: 100%;
+    }
+  }
+  .exp_cont {
+    display: flex;
+    .info {
+      flex: 4;
+    }
+    p {
+      flex: 6;
+      margin-left: 20px;
+    }
   }
 }
 .timeline_point {
@@ -293,9 +374,14 @@ body {
 }
 .portfolio {
   margin: -0.875rem;
+  justify-content: center;
   li {
     margin: 0.875rem;
+    padding-bottom: 0;
     width: auto;
+    @media screen and (min-width: 600px) {
+      width: 44.5%;
+    }
   }
   .port_link {
     position: relative;
@@ -340,4 +426,19 @@ body {
     padding-top: 1.75rem;
     border-top: 2px solid #404242;
   }
+}
+
+// fancybox
+.fancybox-content {
+  background-color: transparent;
+  // padding: 0;
+  max-width: 50%;
+}
+.fancybox-container * {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+.fancybox-slide--html .fancybox-close-small {
+  width: 44px;
 }
