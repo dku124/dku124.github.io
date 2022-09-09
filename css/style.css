@@ -341,4 +341,9 @@ body {
 }
 .hobby_list li img {
   max-height: 30px;
+}
+
+.sec_footer .header_brand {
+  padding-top: 1.75rem;
+  border-top: 2px solid #404242;
 }/*# sourceMappingURL=style.css.map */

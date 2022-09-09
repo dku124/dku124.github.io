@@ -70,6 +70,11 @@ body {
 
 .avatar {
   border-radius: 50%;
+
+  // transform: translateY(0) scale(1);
+  // opacity: 1;
+  // transition: transform 1.2s ease 0.7s, opacity 1.2s ease 0.7s;
+
   img {
     border-radius: 50%;
     width: 11rem;
@@ -327,5 +332,12 @@ body {
     img {
       max-height: 30px;
     }
+  }
+}
+
+.sec_footer {
+  .header_brand {
+    padding-top: 1.75rem;
+    border-top: 2px solid #404242;
   }
 }
