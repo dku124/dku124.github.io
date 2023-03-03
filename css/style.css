@@ -39,6 +39,8 @@ to{width:var(--percent)}
 .txt_small{font-size:.8rem;color:#4a4372}
 .cont_txt{margin-top:.6rem;position:relative;padding-left:1rem}
 .cont_txt::before{content:'';width:5px;height:1px;background-color:#000;position:absolute;top:8px;left:4px}
+.cont_list.bg{background-color: #40424233;padding: .1rem 1rem 1rem;margin-top: 1rem;}
+.cont_txt.link{font-style: italic;}
 @media (max-width: 768px) {
 .wrap{margin:1rem}
 .header{flex-direction:column-reverse}
